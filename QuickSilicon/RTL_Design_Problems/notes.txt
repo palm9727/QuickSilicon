@@ -1,0 +1,10 @@
+wr_flush_o: Goes high when 'qreqn_i' goes goes low.
+            Goes down once 'wr_done_i' goes high.
+
+rd_payload_o: Pops value out of fifo once 'rd_valid_i' is high.
+              Goes to 8'h00 if 'rd_valid_i' is low.
+
+qacceptn_o: Goes down once 'qreqn_i' is low and 'qactive_o' is low.
+
+qactive_o: Goes high when either of the valids go high, or when the fifo is not empty, or if_wakeup_i goes high.
+
