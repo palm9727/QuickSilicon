@@ -121,11 +121,12 @@ module shift_register_tb ();
         reset = 0;
         sdla(1);
 
-        // Test Edge Detector
+        // Test Shift Register
         TestShiftRegister();
 
         $display("*** Simulation done with %0d errors at time %0t ***", errors, $time);
         $finish;
     end
+
 
 endmodule
